@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({
@@ -12,7 +12,7 @@ class CategoryCard extends StatelessWidget {
   });
 
   final String title, icon;
-  final Function() press;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
