@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:shop_ui/screens/home/components/popular.dart';
 
 import '../../constants.dart';
 import 'components/categroies.dart';
@@ -43,7 +44,7 @@ class HomeScrean extends StatelessWidget {
                 ),
                 const Categories(),
                 const NewArrival(),
-
+                const Popular()
               ],
             ),
           ),
