@@ -13,7 +13,7 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+      padding: const EdgeInsets.only(top: defaultPadding, bottom: defaultPadding/2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

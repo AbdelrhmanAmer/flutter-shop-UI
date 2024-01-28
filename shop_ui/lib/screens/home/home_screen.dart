@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../constants.dart';
 import 'components/categroies.dart';
+import 'components/new_arrival.dart';
 import 'components/search_from.dart';
-import 'components/section_title.dart';
 
 class HomeScrean extends StatelessWidget {
   const HomeScrean({super.key});
@@ -42,7 +42,8 @@ class HomeScrean extends StatelessWidget {
                   child: SearchForm(),
                 ),
                 const Categories(),
-                SectionTitle(title: "New Arrival", press: () {})
+                const NewArrival(),
+
               ],
             ),
           ),
@@ -85,3 +86,5 @@ class HomeScrean extends StatelessWidget {
     );
   }
 }
+
+

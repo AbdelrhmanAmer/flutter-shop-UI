@@ -17,12 +17,15 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         textTheme: const TextTheme().copyWith(
-          bodyMedium: const TextStyle(color: Colors.black54, fontWeight: FontWeight.bold),
+          bodyMedium: const TextStyle(
+            color: Colors.black54,
+            fontWeight: FontWeight.bold,
+            fontSize: 13
+          ),
         ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.blue,
           background: bgColor,
-          
         ),
         useMaterial3: true,
         fontFamily: "Gordita",
