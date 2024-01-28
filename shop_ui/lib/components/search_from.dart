@@ -24,9 +24,7 @@ class SearchForm extends StatelessWidget {
             child: SvgPicture.asset("assets/icons/Search.svg"),
           ),
           suffixIcon: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: defaultPadding,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
             child: SizedBox(
               height: 48,
               width: 48,
@@ -37,8 +35,7 @@ class SearchForm extends StatelessWidget {
                   backgroundColor: primaryColor,
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    borderRadius:
-                        BorderRadius.circular(defaultBorderRadius),
+                    borderRadius: BorderRadius.circular(defaultBorderRadius),
                   ),
                 ),
                 child: SvgPicture.asset(

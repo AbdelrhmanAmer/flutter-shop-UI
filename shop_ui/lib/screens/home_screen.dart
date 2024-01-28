@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:shop_ui/constants.dart';
 
+import '../constants.dart';
+import '../components/categroies.dart';
 import '../components/search_from.dart';
 
 class HomeScrean extends StatelessWidget {
@@ -25,14 +26,20 @@ class HomeScrean extends StatelessWidget {
                     .copyWith(fontWeight: FontWeight.bold),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: defaultPadding / 2),
+                padding: const EdgeInsets.only(top: defaultPadding / 2),
                 child: Text(
                   "best Outfits for you",
-                  style: Theme.of(context).textTheme.bodyMedium,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium!
+                      .copyWith(fontWeight: FontWeight.w500),
                 ),
               ),
-              SearchForm(),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: defaultPadding),
+                child: SearchForm(),
+              ),
+              Categories()
             ],
           ),
         ),

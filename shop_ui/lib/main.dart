@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         textTheme: const TextTheme().copyWith(
-          bodyMedium: const TextStyle(color: Colors.black54),
+          bodyMedium: const TextStyle(color: Colors.black54, fontWeight: FontWeight.bold),
         ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.blue,
