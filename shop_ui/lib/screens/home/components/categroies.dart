@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
-import '../../models/Category.dart';
+import '../../../constants.dart';
+import '../../../models/Category.dart';
 import 'category_card.dart';
 
 class Categories extends StatelessWidget {

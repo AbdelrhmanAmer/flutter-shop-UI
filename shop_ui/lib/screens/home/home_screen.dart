@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 import 'components/categroies.dart';
 import 'components/search_from.dart';
 import 'components/section_title.dart';
@@ -16,33 +16,35 @@ class HomeScrean extends StatelessWidget {
         appBar: buildAppBar(context),
         body: Padding(
           padding: const EdgeInsets.all(defaultPadding),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Explore",
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineMedium!
-                    .copyWith(fontWeight: FontWeight.bold),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: defaultPadding / 2),
-                child: Text(
-                  "best Outfits for you",
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Explore",
                   style: Theme.of(context)
                       .textTheme
-                      .bodyMedium!
-                      .copyWith(fontWeight: FontWeight.w500),
+                      .headlineMedium!
+                      .copyWith(fontWeight: FontWeight.bold),
                 ),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: defaultPadding),
-                child: SearchForm(),
-              ),
-              const Categories(),
-              SectionTitle(title: "New Arrival",press: (){})
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(top: defaultPadding / 2),
+                  child: Text(
+                    "best Outfits for you",
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium!
+                        .copyWith(fontWeight: FontWeight.w500),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: defaultPadding),
+                  child: SearchForm(),
+                ),
+                const Categories(),
+                SectionTitle(title: "New Arrival", press: () {})
+              ],
+            ),
           ),
         ),
       ),
@@ -83,5 +85,3 @@ class HomeScrean extends StatelessWidget {
     );
   }
 }
-
-
