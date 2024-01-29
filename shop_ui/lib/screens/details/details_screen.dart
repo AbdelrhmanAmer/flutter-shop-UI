@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_ui/constants.dart';
 import 'package:shop_ui/models/product.dart';
 
-import 'components/color_dot.dart';
+import 'components/add_to_cart_button.dart';
 import 'components/colors_options.dart';
 import 'components/description.dart';
 import 'components/favorite_button.dart';
@@ -32,7 +32,7 @@ class DetailsScreen extends StatelessWidget {
             children: [
               SizedBox(
                 width: double.infinity,
-                height: size.height * .45,
+                height: size.height * .37,
                 child: Image.asset(
                   product.image,
                   fit: BoxFit.fitHeight,
@@ -40,23 +40,30 @@ class DetailsScreen extends StatelessWidget {
               ),
               const SizedBox(height: defaultPadding),
               Container(
-                height: size.height * .43,
-                padding: const EdgeInsets.symmetric(
-                    vertical: defaultPadding + defaultPadding / 2,
-                    horizontal: defaultPadding + 5),
+                height: size.height * .50,
+                padding: const EdgeInsets.only(
+                  top: defaultPadding + defaultPadding / 4,
+                  right: defaultPadding + 5,
+                  left: defaultPadding + 5,
+                ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(defaultBorderRadius * 3),
                   color: Colors.white,
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    TitleAndPrice(product: product),
-                    const SizedBox(height: defaultPadding),
-                    Description(product: product),
-                    const SizedBox(height: defaultPadding),
-                    ColorsOptions(product: product,)
-                  ],
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      TitleAndPrice(product: product),
+                      const SizedBox(height: defaultPadding),
+                      Description(product: product),
+                      const SizedBox(height: defaultPadding),
+                      ColorsOptions(product: product),
+                      const SizedBox(height: defaultPadding*2),
+                      AddToCartButton(size: size),
+                      const SizedBox(height: defaultPadding)
+                    ],
+                  ),
                 ),
               ),
             ],
