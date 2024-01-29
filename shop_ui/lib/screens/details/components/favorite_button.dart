@@ -26,7 +26,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
         });
       },
       icon: Container(
-        padding: const EdgeInsets.all(defaultPadding / 4),
+        padding: const EdgeInsets.all(defaultPadding / 3),
         height: 30,
         width: 30,
         decoration: BoxDecoration(

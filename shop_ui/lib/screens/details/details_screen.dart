@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shop_ui/constants.dart';
 import 'package:shop_ui/models/product.dart';
 
+import 'components/color_dot.dart';
+import 'components/colors_options.dart';
+import 'components/description.dart';
 import 'components/favorite_button.dart';
 import 'components/title_and_price.dart';
 
@@ -35,21 +38,26 @@ class DetailsScreen extends StatelessWidget {
                   fit: BoxFit.fitHeight,
                 ),
               ),
-              const SizedBox(
-                height: defaultPadding,
-              ),
+              const SizedBox(height: defaultPadding),
               Container(
                 height: size.height * .43,
                 padding: const EdgeInsets.symmetric(
-                    vertical: defaultPadding, horizontal: defaultPadding),
+                    vertical: defaultPadding + defaultPadding / 2,
+                    horizontal: defaultPadding + 5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(defaultBorderRadius * 3),
                   color: Colors.white,
                 ),
-                child: Column(children: [
-                  TitleAndPrice(product: product),
-                  Text(product.description),
-                ]),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TitleAndPrice(product: product),
+                    const SizedBox(height: defaultPadding),
+                    Description(product: product),
+                    const SizedBox(height: defaultPadding),
+                    ColorsOptions(product: product,)
+                  ],
+                ),
               ),
             ],
           ),
