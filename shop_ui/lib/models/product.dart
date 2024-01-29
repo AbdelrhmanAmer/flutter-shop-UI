@@ -32,8 +32,8 @@ List<Product> products = [
         "A Hanley shirt a collarless puliover shirt. by a round neckline and a placket about 3 to 5 inches (8 to 13 cm) long and usually having 2-5 buttons",
     colors: [
       Colors.black,
-      Color.fromARGB(255, 255, 254, 218),
-      Color.fromARGB(255, 124, 190, 48).withOpacity(.8),
+      const Color.fromARGB(255, 255, 254, 218),
+      const Color.fromARGB(255, 124, 190, 48).withOpacity(.8),
       Colors.blue.withOpacity(.8)
     ],
     selectedColorIndex: 1
@@ -46,10 +46,10 @@ List<Product> products = [
     description:
         "A Hanley shirt a collarless puliover shirt. by a round neckline and a placket about 3 to 5 inches (8 to 13 cm) long and usually having 2-5 buttons",
     colors: [
-      Color.fromARGB(234, 0, 0, 61),
+      const Color.fromARGB(234, 0, 0, 61),
       Colors.amber.withOpacity(.3),
       Colors.teal.withOpacity(.2),
-      Color.fromARGB(255, 233, 9, 58).withOpacity(.6)
+      const Color.fromARGB(255, 233, 9, 58).withOpacity(.6)
     ],
     selectedColorIndex: 0
   ),
@@ -64,7 +64,7 @@ List<Product> products = [
     colors: [
       const Color.fromARGB(137, 255, 7, 7),
       Colors.deepOrangeAccent.withOpacity(.3),
-      Color.fromARGB(255, 10, 73, 1).withOpacity(.9),
+      const Color.fromARGB(255, 10, 73, 1).withOpacity(.9),
       const Color.fromARGB(255, 26, 28, 29).withOpacity(.8)
     ],
     selectedColorIndex: 2
@@ -80,7 +80,7 @@ List<Product> products = [
     colors: [
       Colors.black54,
       Colors.deepOrangeAccent.withOpacity(.9),
-      Color.fromARGB(255, 48, 82, 9).withOpacity(.9),
+      const Color.fromARGB(255, 48, 82, 9).withOpacity(.9),
       Colors.blue.withOpacity(.9)
     ],
     selectedColorIndex: 2

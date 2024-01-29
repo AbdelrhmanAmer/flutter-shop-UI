@@ -19,6 +19,7 @@ class AddToCartButton extends StatelessWidget {
           onPressed: () {},
           style: ElevatedButton.styleFrom(
             backgroundColor: primaryColor,
+            shape: const StadiumBorder()
           ),
           child: Text(
             "Add To Cart",

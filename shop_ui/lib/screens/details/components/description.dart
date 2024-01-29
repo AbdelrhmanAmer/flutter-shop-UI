@@ -14,8 +14,10 @@ class Description extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       product.description,
-      style: Theme.of(context).textTheme.labelSmall!.copyWith(
-          fontWeight: FontWeight.bold, color: Colors.black54),
+      style: Theme.of(context).textTheme.labelMedium!.copyWith(
+            fontWeight: FontWeight.bold,
+            color: Colors.black54,
+          ),
     );
   }
 }
