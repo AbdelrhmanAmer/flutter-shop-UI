@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 import '../../../models/product.dart';
+import '../../details/details_screen.dart';
 import 'product_card.dart';
 import 'section_title.dart';
 
@@ -21,11 +22,21 @@ class Popular extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: List.generate(
               products.length,
-              (index) =>
-                  Padding(
-                    padding: const EdgeInsets.only(left:defaultPadding/2),
-                    child: ProductCard(product: products[index], press: () {}),
-                  ),
+              (index) => Padding(
+                padding: const EdgeInsets.only(left: defaultPadding / 2),
+                child: ProductCard(
+                  product: products[index],
+                  press: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (ctx) {
+                        return DetailsScreen(
+                          product: products[index],
+                        );
+                      }),
+                    );
+                  },
+                ),
+              ),
             ),
           ),
         ),
